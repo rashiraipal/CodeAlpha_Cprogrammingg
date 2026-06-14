@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main()
+{
+    float a,b;
+    char s;
+    printf("Enter the operation that you want to perform among these:'+','-','*','/','%'\n");
+    scanf("%c",&s);
+    printf("Enter the 1st Number To perform Calculation\n");
+    scanf("%f",&a);
+    printf("Enter the 2nd Number To perform Calculation\n");
+    scanf("%f",&b);
+
+    switch(s)
+    {
+        case '+':{printf("The addition is:%f",a+b);
+                   break;
+                   }
+        case '-':{   printf("The subtraction is:%f",a-b);
+                     break;
+                 }
+        case '*':{     printf("The multiplication is:%f",a*b);
+                      break;
+                 }   
+         case '/':{   if(b!=0.0) 
+                       printf("The division is:%f",a/b);
+                       else
+                       printf("The division will be infinite");
+                       break;
+                 }  
+        default:printf("Wrong Input"); 
+    }
+    return 0;
+
+}
